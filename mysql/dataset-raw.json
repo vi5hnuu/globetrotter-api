@@ -1,0 +1,653 @@
+[
+  {
+    "alias": "dst1",
+    "name": "Paris",
+    "clues": ["City of Lights", "Home of the Eiffel Tower"],
+    "funFacts": [
+      "The Louvre is the most visited art museum in the world.",
+      "Paris has only one stop sign in the entire city."
+    ]
+  },
+  {
+    "alias": "dst2",
+    "name": "Tokyo",
+    "clues": ["Capital of Japan", "Known for its technology and anime"],
+    "funFacts": [
+      "Tokyo has the world's busiest railway station, Shinjuku.",
+      "There are more than 160,000 restaurants in Tokyo."
+    ]
+  },
+  {
+    "alias": "dst3",
+    "name": "Rome",
+    "clues": ["Eternal City", "Home of the Colosseum"],
+    "funFacts": [
+      "Rome has over 280 fountains and more than 900 churches.",
+      "Cats have special legal protection in Rome."
+    ]
+  },
+  {
+    "alias": "dst4",
+    "name": "London",
+    "clues": ["Capital of England", "Home of Big Ben"],
+    "funFacts": [
+      "London has over 170 museums.",
+      "The black cabs in London have to pass a strict test called 'The Knowledge'."
+    ]
+  },
+  {
+    "alias": "dst5",
+    "name": "New York City",
+    "clues": ["The Big Apple", "Home of the Statue of Liberty"],
+    "funFacts": ["New York City has over 800 languages spoken.", "The Empire State Building has its own zip code."]
+  },
+  {
+    "alias": "dst6",
+    "name": "Sydney",
+    "clues": ["Home of the Opera House", "Largest city in Australia"],
+    "funFacts": ["Sydney has over 100 beaches.", "The Sydney Harbour Bridge is nicknamed 'The Coathanger'."]
+  },
+  {
+    "alias": "dst7",
+    "name": "Barcelona",
+    "clues": ["Known for Gaudi's architecture", "Capital of Catalonia"],
+    "funFacts": [
+      "Barcelona has over 4.5 kilometers of beaches.",
+      "La Rambla is a famous pedestrian street in Barcelona."
+    ]
+  },
+  {
+    "alias": "dst8",
+    "name": "Dubai",
+    "clues": ["Known for its luxury and skyscrapers", "Located in the UAE"],
+    "funFacts": [
+      "Dubai is home to the world's tallest building, the Burj Khalifa.",
+      "Dubai has man-made islands shaped like palm trees and a world map."
+    ]
+  },
+  {
+    "alias": "dst9",
+    "name": "Amsterdam",
+    "clues": ["Known for its canals", "Capital of the Netherlands"],
+    "funFacts": ["Amsterdam has more bicycles than people.", "The city is built on millions of wooden poles."]
+  },
+  {
+    "alias": "dst10",
+    "name": "Rio de Janeiro",
+    "clues": ["Home of Christ the Redeemer", "Known for its beaches"],
+    "funFacts": [
+      "Rio de Janeiro hosts the famous Carnival festival.",
+      "Copacabana beach is one of the most famous beaches in the world."
+    ]
+  },
+  {
+    "alias": "dst11",
+    "name": "Beijing",
+    "clues": ["Capital of China", "Home of the Forbidden City"],
+    "funFacts": ["Beijing has seven UNESCO World Heritage Sites.", "The Great Wall of China is visible from space."]
+  },
+  {
+    "alias": "dst12",
+    "name": "Cairo",
+    "clues": ["Capital of Egypt", "Home of the Pyramids of Giza"],
+    "funFacts": ["Cairo is the largest city in Africa.", "The Nile River flows through Cairo."]
+  },
+  {
+    "alias": "dst13",
+    "name": "Berlin",
+    "clues": ["Once divided by a wall", "Capital of Germany"],
+    "funFacts": ["The Berlin Wall fell in 1989.", "It has more bridges than Venice."]
+  },
+  {
+    "alias": "dst14",
+    "name": "Moscow",
+    "clues": ["Capital of Russia", "Home of the Kremlin"],
+    "funFacts": ["Moscow has over 600 churches.", "The Moscow Metro is known for its elaborate architecture."]
+  },
+  {
+    "alias": "dst15",
+    "name": "Istanbul",
+    "clues": ["Straddles two continents", "Known for the Hagia Sophia"],
+    "funFacts": [
+      "Istanbul was formerly known as Constantinople.",
+      "The Grand Bazaar is one of the oldest and largest covered markets in the world."
+    ]
+  },
+  {
+    "alias": "dst16",
+    "name": "Bangkok",
+    "clues": ["Capital of Thailand", "Known for its street food and temples"],
+    "funFacts": ["Bangkok is officially known as Krung Thep Maha Nakhon.", "It has floating markets."]
+  },
+  {
+    "alias": "dst17",
+    "name": "Cape Town",
+    "clues": ["Located at the southern tip of Africa", "Home of Table Mountain"],
+    "funFacts": ["Cape Town is known for its diverse flora and fauna.", "It has a penguin colony at Boulders Beach."]
+  },
+  {
+    "alias": "dst18",
+    "name": "Buenos Aires",
+    "clues": ["Capital of Argentina", "Known for tango"],
+    "funFacts": [
+      "Buenos Aires is often called the 'Paris of South America'.",
+      "It has more bookstores per capita than any other city."
+    ]
+  },
+  {
+    "alias": "dst19",
+    "name": "Toronto",
+    "clues": ["Largest city in Canada", "Known for the CN Tower"],
+    "funFacts": [
+      "Toronto is one of the most multicultural cities in the world.",
+      "It has a network of underground pedestrian walkways called PATH."
+    ]
+  },
+  {
+    "alias": "dst20",
+    "name": "Seoul",
+    "clues": ["Capital of South Korea", "Known for its K-pop and technology"],
+    "funFacts": ["Seoul has a high-speed internet infrastructure.", "It has many palaces and historical sites."]
+  },
+  {
+    "alias": "dst21",
+    "name": "Vienna",
+    "clues": ["Capital of Austria", "Known for its classical music"],
+    "funFacts": ["Vienna is often called the 'City of Music'.", "It has a long history of coffeehouse culture."]
+  },
+  {
+    "alias": "dst22",
+    "name": "Dublin",
+    "clues": ["Capital of Ireland", "Known for its pubs and Guinness"],
+    "funFacts": [
+      "Dublin has a rich literary history, with writers like James Joyce.",
+      "It has many green spaces and parks."
+    ]
+  },
+  {
+    "alias": "dst23",
+    "name": "Prague",
+    "clues": ["Capital of the Czech Republic", "Known for its medieval architecture"],
+    "funFacts": ["Prague has a famous astronomical clock.", "It's known for its beer culture."]
+  },
+  {
+    "alias": "dst24",
+    "name": "Singapore",
+    "clues": ["City-state", "Known for its cleanliness and gardens"],
+    "funFacts": [
+      "Singapore has a famous indoor waterfall at Gardens by the Bay.",
+      "It has strict laws and regulations."
+    ]
+  },
+  {
+    "alias": "dst25",
+    "name": "Helsinki",
+    "clues": ["Capital of Finland", "Known for its design and sauna culture"],
+    "funFacts": ["Helsinki has many public saunas.", "It has a unique church built into a rock."]
+  },
+  {
+    "alias": "dst26",
+    "name": "Lisbon",
+    "clues": ["Capital of Portugal", "Known for its trams and tiles"],
+    "funFacts": ["Lisbon has a famous yellow tram system.", "It's known for its 'azulejo' tiles."]
+  },
+  {
+    "alias": "dst27",
+    "name": "Copenhagen",
+    "clues": ["Capital of Denmark", "Known for its design and cycling culture"],
+    "funFacts": [
+      "Copenhagen has a famous statue of the Little Mermaid.",
+      "It's known for its sustainable living practices."
+    ]
+  },
+  {
+    "alias": "dst28",
+    "name": "Stockholm",
+    "clues": ["Capital of Sweden", "Built on 14 islands"],
+    "funFacts": ["Stockholm is home to the Nobel Prize ceremonies.", "It has a unique subway art system."]
+  },
+  {
+    "alias": "dst29",
+    "name": "San Francisco",
+    "clues": ["Known for the Golden Gate Bridge", "Home of cable cars"],
+    "funFacts": ["San Francisco has a famous island prison called Alcatraz.", "It's known for its steep hills."]
+  },
+  {
+    "alias": "dst30",
+    "name": "Los Angeles",
+    "clues": ["Home of Hollywood", "City of Angels"],
+    "funFacts": ["Los Angeles has a famous Walk of Fame.", "It has a diverse culinary scene."]
+  },
+  {
+    "alias": "dst31",
+    "name": "Chicago",
+    "clues": ["Known for its architecture", "The Windy City"],
+    "funFacts": ["Chicago has a famous deep-dish pizza.", "It has a beautiful waterfront along Lake Michigan."]
+  },
+  {
+    "alias": "dst32",
+    "name": "Vancouver",
+    "clues": ["Located in Canada", "Surrounded by mountains and water"],
+    "funFacts": [
+      "Vancouver has a famous suspension bridge called Capilano Suspension Bridge.",
+      "It's known for its outdoor activities."
+    ]
+  },
+  {
+    "alias": "dst33",
+    "name": "Mexico City",
+    "clues": ["Capital of Mexico", "Known for its ancient ruins"],
+    "funFacts": ["Mexico City has a large historic center.", "It has a vibrant street food scene."]
+  },
+  {
+    "alias": "dst34",
+    "name": "Madrid",
+    "clues": ["Capital of Spain", "Home of the Prado Museum"],
+    "funFacts": ["Madrid has a famous Royal Palace.", "It's known for its tapas culture."]
+  },
+  {
+    "alias": "dst35",
+    "name": "Munich",
+    "clues": ["Located in Germany", "Known for Oktoberfest"],
+    "funFacts": ["Munich has a famous beer hall called Hofbräuhaus.", "It has a beautiful English Garden."]
+  },
+  {
+    "alias": "dst36",
+    "name": "Florence",
+    "clues": ["Located in Italy", "Known for Renaissance art"],
+    "funFacts": ["Florence has a famous Duomo.", "It's known for its leather goods."]
+  },
+  {
+    "alias": "dst37",
+    "name": "Venice",
+    "clues": ["Known for its canals", "Built on islands"],
+    "funFacts": ["Venice has gondolas as a mode of transportation.", "It has a famous carnival."]
+  },
+  {
+    "alias": "dst38",
+    "name": "Jerusalem",
+    "clues": ["Holy city for three religions", "Located in the Middle East"],
+    "funFacts": ["Jerusalem has the Western Wall.", "It has a rich history and culture."]
+  },
+  {
+    "alias": "dst39",
+    "name": "Athens",
+    "clues": ["Capital of Greece", "Known for its ancient ruins"],
+    "funFacts": ["Athens has the Acropolis.", "It's the birthplace of democracy."]
+  },
+  {
+    "alias": "dst40",
+    "name": "Budapest",
+    "clues": ["Capital of Hungary", "Known for its thermal baths"],
+    "funFacts": ["Budapest has a beautiful Parliament building.", "It's divided by the Danube River."]
+  },
+  {
+    "alias": "dst41",
+    "name": "Krakow",
+    "clues": ["Located in Poland", "Known for its medieval architecture"],
+    "funFacts": ["Krakow has a beautiful Main Market Square.", "It has a historic Jewish quarter."]
+  },
+  {
+    "alias": "dst42",
+    "name": "Saint Petersburg",
+    "clues": ["Located in Russia", "Known for its palaces"],
+    "funFacts": ["Saint Petersburg has the Hermitage Museum.", "It was once the capital of Russia."]
+  },
+  {
+    "alias": "dst43",
+    "name": "Kyoto",
+    "clues": ["Located in Japan", "Known for its temples and gardens"],
+    "funFacts": ["Kyoto has a famous bamboo forest.", "It was once the capital of Japan."]
+  },
+  {
+    "alias": "dst44",
+    "name": "Shanghai",
+    "clues": ["Located in China", "Known for its skyline"],
+    "funFacts": ["Shanghai has the Oriental Pearl Tower.", "It's a major financial center."]
+  },
+  {
+    "alias": "dst45",
+    "name": "Hong Kong",
+    "clues": ["Special Administrative Region of China", "Known for its harbor"],
+    "funFacts": ["Hong Kong has a famous skyline.", "It's a major shopping destination."]
+  },
+  {
+    "alias": "dst46",
+    "name": "Mumbai",
+    "clues": ["Located in India", "Known as the 'City of Dreams'"],
+    "funFacts": ["Mumbai has the Gateway of India.", "It's home to Bollywood."]
+  },
+  {
+    "alias": "dst47",
+    "name": "Delhi",
+    "clues": ["Capital of India", "Known for its historical monuments"],
+    "funFacts": ["Delhi has the Red Fort.", "It's a major political center."]
+  },
+  {
+    "alias": "dst48",
+    "name": "Jaipur",
+    "clues": ["Located in India", "Known as the 'Pink City'"],
+    "funFacts": ["Jaipur has the Hawa Mahal.", "It's known for its textiles."]
+  },
+  {
+    "alias": "dst49",
+    "name": "Agra",
+    "clues": ["Located in India", "Home of the Taj Mahal"],
+    "funFacts": ["Agra has the Agra Fort.", "It's a popular tourist destination."]
+  },
+  {
+    "alias": "dst50",
+    "name": "Varanasi",
+    "clues": ["Located in India", "Known as the 'Holy City'"],
+    "funFacts": ["Varanasi has the Ganges River.", "It's a major pilgrimage site for Hindus."]
+  },
+  {
+    "alias": "dst51",
+    "name": "Kathmandu",
+    "clues": ["Capital of Nepal", "Known for its temples and mountains"],
+    "funFacts": ["Kathmandu has many UNESCO World Heritage Sites.", "It's a gateway to the Himalayas."]
+  },
+  {
+    "alias": "dst52",
+    "name": "Hanoi",
+    "clues": ["Capital of Vietnam", "Known for its Old Quarter"],
+    "funFacts": ["Hanoi has a famous water puppet show.", "It has a rich history and culture."]
+  },
+  {
+    "alias": "dst53",
+    "name": "Ho Chi Minh City",
+    "clues": ["Located in Vietnam", "Formerly known as Saigon"],
+    "funFacts": ["Ho Chi Minh City has a vibrant nightlife.", "It has many museums and historical sites."]
+  },
+  {
+    "alias": "dst54",
+    "name": "Phnom Penh",
+    "clues": ["Capital of Cambodia", "Located on the Mekong River"],
+    "funFacts": ["Phnom Penh has the Royal Palace.", "It has a somber history related to the Khmer Rouge."]
+  },
+  {
+    "alias": "dst55",
+    "name": "Yangon",
+    "clues": ["Located in Myanmar", "Known for its pagodas"],
+    "funFacts": ["Yangon has the Shwedagon Pagoda.", "It's a major commercial center."]
+  },
+  {
+    "alias": "dst56",
+    "name": "Manila",
+    "clues": ["Capital of the Philippines", "Located on Manila Bay"],
+    "funFacts": ["Manila has a rich colonial history.", "It has a vibrant street food scene."]
+  },
+  {
+    "alias": "dst57",
+    "name": "Jakarta",
+    "clues": ["Capital of Indonesia", "Located on the island of Java"],
+    "funFacts": ["Jakarta is a major economic hub.", "It has a mix of modern and traditional culture."]
+  },
+  {
+    "alias": "dst58",
+    "name": "Kuala Lumpur",
+    "clues": ["Capital of Malaysia", "Known for the Petronas Towers"],
+    "funFacts": ["Kuala Lumpur has a diverse population.", "It has a vibrant street market scene."]
+  },
+  {
+    "alias": "dst59",
+    "name": "Perth",
+    "clues": ["Located in Western Australia", "Known for its beaches"],
+    "funFacts": ["Perth is one of the most isolated major cities in the world.", "It has a relaxed lifestyle."]
+  },
+  {
+    "alias": "dst60",
+    "name": "Auckland",
+    "clues": ["Located in New Zealand", "Known as the 'City of Sails'"],
+    "funFacts": ["Auckland has a beautiful harbor.", "It's a major cultural center."]
+  },
+  {
+    "alias": "dst61",
+    "name": "Wellington",
+    "clues": ["Capital of New Zealand", "Known for its arts and culture"],
+    "funFacts": ["Wellington is known for its film industry.", "It has a vibrant coffee culture."]
+  },
+  {
+    "alias": "dst62",
+    "name": "Honolulu",
+    "clues": ["Located in Hawaii", "Known for its beaches and surfing"],
+    "funFacts": ["Honolulu has a famous Waikiki Beach.", "It has a rich Polynesian culture."]
+  },
+  {
+    "alias": "dst63",
+    "name": "Anchorage",
+    "clues": ["Located in Alaska", "Known for its wilderness"],
+    "funFacts": ["Anchorage has many outdoor activities.", "It's a gateway to national parks."]
+  },
+  {
+    "alias": "dst64",
+    "name": "Seattle",
+    "clues": ["Located in Washington", "Known for its coffee and tech industry"],
+    "funFacts": ["Seattle has the Space Needle.", "It's known for its rainy weather."]
+  },
+  {
+    "alias": "dst65",
+    "name": "Portland",
+    "clues": ["Located in Oregon", "Known for its food trucks and breweries"],
+    "funFacts": ["Portland is known for its eco-friendly practices.", "It has a vibrant arts scene."]
+  },
+  {
+    "alias": "dst66",
+    "name": "Las Vegas",
+    "clues": ["Located in Nevada", "Known for its casinos and entertainment"],
+    "funFacts": ["Las Vegas is known for its bright lights.", "It has many world-class shows."]
+  },
+  {
+    "alias": "dst67",
+    "name": "Miami",
+    "clues": ["Located in Florida", "Known for its beaches and nightlife"],
+    "funFacts": ["Miami has a vibrant Latin American culture.", "It's known for its Art Deco architecture."]
+  },
+  {
+    "alias": "dst68",
+    "name": "New Orleans",
+    "clues": ["Located in Louisiana", "Known for its jazz music and Mardi Gras"],
+    "funFacts": ["New Orleans has a unique Creole cuisine.", "It has a rich history and culture."]
+  },
+  {
+    "alias": "dst69",
+    "name": "Austin",
+    "clues": ["Capital of Texas", "Known for its live music and food trucks"],
+    "funFacts": ["Austin is known as the 'Live Music Capital of the World'.", "It has a growing tech industry."]
+  },
+  {
+    "alias": "dst70",
+    "name": "Nashville",
+    "clues": ["Located in Tennessee", "Known for its country music"],
+    "funFacts": ["Nashville is known as 'Music City'.", "It has a vibrant nightlife."]
+  },
+  {
+    "alias": "dst71",
+    "name": "Denver",
+    "clues": ["Capital of Colorado", "Known for its mountains and outdoor activities"],
+    "funFacts": ["Denver is known as the 'Mile High City'.", "It has a thriving craft beer scene."]
+  },
+  {
+    "alias": "dst72",
+    "name": "Salt Lake City",
+    "clues": ["Capital of Utah", "Known for its skiing and Mormon history"],
+    "funFacts": ["Salt Lake City has Temple Square.", "It hosted the 2002 Winter Olympics."]
+  },
+  {
+    "alias": "dst73",
+    "name": "Minneapolis",
+    "clues": ["Located in Minnesota", "Known for its lakes and parks"],
+    "funFacts": ["Minneapolis and St. Paul are known as the 'Twin Cities'.", "It has a vibrant theater scene."]
+  },
+  {
+    "alias": "dst74",
+    "name": "St. Louis",
+    "clues": ["Located in Missouri", "Known for the Gateway Arch"],
+    "funFacts": ["St. Louis has a rich history related to the Mississippi River.", "It has a famous botanical garden."]
+  },
+  {
+    "alias": "dst75",
+    "name": "Atlanta",
+    "clues": ["Capital of Georgia", "Known for its role in the Civil Rights Movement"],
+    "funFacts": ["Atlanta is the headquarters of many major corporations.", "It has a vibrant music scene."]
+  },
+  {
+    "alias": "dst76",
+    "name": "Philadelphia",
+    "clues": ["Located in Pennsylvania", "Known for its history and the Liberty Bell"],
+    "funFacts": [
+      "Philadelphia is known as the 'City of Brotherly Love'.",
+      "It has a famous art museum featured in the 'Rocky' movies."
+    ]
+  },
+  {
+    "alias": "dst77",
+    "name": "Boston",
+    "clues": ["Capital of Massachusetts", "Known for its history and universities"],
+    "funFacts": ["Boston has the famous Freedom Trail.", "It's known for its seafood, especially clam chowder."]
+  },
+  {
+    "alias": "dst78",
+    "name": "Washington D.C.",
+    "clues": ["Capital of the United States", "Known for its monuments and museums"],
+    "funFacts": ["Washington D.C. has many free museums.", "It's home to the White House and the Capitol Building."]
+  },
+  {
+    "alias": "dst79",
+    "name": "Detroit",
+    "clues": ["Located in Michigan", "Known as 'Motor City'"],
+    "funFacts": ["Detroit is the birthplace of Motown music.", "It has a rich industrial history."]
+  },
+  {
+    "alias": "dst80",
+    "name": "Cleveland",
+    "clues": ["Located in Ohio", "Known for the Rock & Roll Hall of Fame"],
+    "funFacts": ["Cleveland has a vibrant arts scene.", "It's located on Lake Erie."]
+  },
+  {
+    "alias": "dst81",
+    "name": "Pittsburgh",
+    "clues": ["Located in Pennsylvania", "Known for its bridges and steel history"],
+    "funFacts": ["Pittsburgh is known as the 'City of Bridges'.", "It has a revitalized downtown area."]
+  },
+  {
+    "alias": "dst82",
+    "name": "Cincinnati",
+    "clues": ["Located in Ohio", "Known for its chili and historic architecture"],
+    "funFacts": ["Cincinnati has a famous zoo.", "It's located on the Ohio River."]
+  },
+  {
+    "alias": "dst83",
+    "name": "Indianapolis",
+    "clues": ["Capital of Indiana", "Known for the Indianapolis 500"],
+    "funFacts": ["Indianapolis has a large children's museum.", "It's a major transportation hub."]
+  },
+  {
+    "alias": "dst84",
+    "name": "Columbus",
+    "clues": ["Capital of Ohio", "Known for its universities and parks"],
+    "funFacts": ["Columbus has a vibrant arts scene.", "It's a growing tech hub."]
+  },
+  {
+    "alias": "dst85",
+    "name": "Charlotte",
+    "clues": ["Located in North Carolina", "Known for its banking industry"],
+    "funFacts": ["Charlotte has a growing culinary scene.", "It's a major sports city."]
+  },
+  {
+    "alias": "dst86",
+    "name": "Raleigh",
+    "clues": ["Capital of North Carolina", "Known for its research and technology"],
+    "funFacts": ["Raleigh is part of the Research Triangle Park.", "It has a growing craft beer scene."]
+  },
+  {
+    "alias": "dst87",
+    "name": "Orlando",
+    "clues": ["Located in Florida", "Known for its theme parks"],
+    "funFacts": ["Orlando is home to Walt Disney World.", "It's a major tourist destination."]
+  },
+  {
+    "alias": "dst88",
+    "name": "Tampa",
+    "clues": ["Located in Florida", "Known for its beaches and Cuban heritage"],
+    "funFacts": ["Tampa has a historic Ybor City district.", "It's known for its cigar industry."]
+  },
+  {
+    "alias": "dst89",
+    "name": "San Diego",
+    "clues": ["Located in California", "Known for its beaches and zoo"],
+    "funFacts": ["San Diego has Balboa Park.", "It's known for its craft beer scene."]
+  },
+  {
+    "alias": "dst90",
+    "name": "Sacramento",
+    "clues": ["Capital of California", "Known for its history and farm-to-fork cuisine"],
+    "funFacts": ["Sacramento has a historic Old Sacramento district.", "It's located at the confluence of two rivers."]
+  },
+  {
+    "alias": "dst91",
+    "name": "Phoenix",
+    "clues": ["Capital of Arizona", "Known for its desert landscape and golf"],
+    "funFacts": ["Phoenix has a vibrant arts scene.", "It's known for its warm weather."]
+  },
+  {
+    "alias": "dst92",
+    "name": "Tucson",
+    "clues": ["Located in Arizona", "Known for its desert landscape and Mexican heritage"],
+    "funFacts": ["Tucson has Saguaro National Park.", "It's known for its unique culinary scene."]
+  },
+  {
+    "alias": "dst93",
+    "name": "Albuquerque",
+    "clues": ["Located in New Mexico", "Known for its hot air balloon festival"],
+    "funFacts": [
+      "Albuquerque has a rich Native American and Hispanic history.",
+      "It's known for its scenic views of the Sandia Mountains."
+    ]
+  },
+  {
+    "alias": "dst94",
+    "name": "Santa Fe",
+    "clues": ["Capital of New Mexico", "Known for its arts and adobe architecture"],
+    "funFacts": ["Santa Fe has a vibrant arts scene.", "It's known for its unique southwestern cuisine."]
+  },
+  {
+    "alias": "dst95",
+    "name": "Oklahoma City",
+    "clues": ["Capital of Oklahoma", "Known for its cowboy culture and museums"],
+    "funFacts": [
+      "Oklahoma City has the National Cowboy & Western Heritage Museum.",
+      "It's known for its revitalized Bricktown district."
+    ]
+  },
+  {
+    "alias": "dst96",
+    "name": "Kansas City",
+    "clues": ["Located in Missouri and Kansas", "Known for its barbecue and jazz music"],
+    "funFacts": ["Kansas City has a vibrant jazz scene.", "It's known for its many fountains."]
+  },
+  {
+    "alias": "dst97",
+    "name": "Omaha",
+    "clues": ["Located in Nebraska", "Known for its zoo and Berkshire Hathaway headquarters"],
+    "funFacts": ["Omaha has the Henry Doorly Zoo and Aquarium.", "It's a major transportation hub."]
+  },
+  {
+    "alias": "dst98",
+    "name": "Des Moines",
+    "clues": ["Capital of Iowa", "Known for its insurance industry and state fair"],
+    "funFacts": ["Des Moines has a vibrant arts scene.", "It's known for its friendly atmosphere."]
+  },
+  {
+    "alias": "dst99",
+    "name": "Sioux Falls",
+    "clues": ["Located in South Dakota", "Known for its waterfalls and parks"],
+    "funFacts": ["Sioux Falls has Falls Park.", "It's a growing city with a strong economy."]
+  },
+  {
+    "alias": "dst100",
+    "name": "Fargo",
+    "clues": ["Located in North Dakota", "Known for its friendly people and winter weather"],
+    "funFacts": ["Fargo has a vibrant arts scene.", "It's known for its Scandinavian heritage."]
+  }
+]
