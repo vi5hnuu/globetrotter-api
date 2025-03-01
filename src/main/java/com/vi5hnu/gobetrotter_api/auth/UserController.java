@@ -121,15 +121,16 @@ public class UserController {
     public ResponseEntity<Map<String,Object>> login(@RequestBody @Valid LoginRequestDto loginRequestDto, HttpServletResponse httpResponse) throws ApiException {
         final UserModel userModel=this.userService.findByUsernameOrEmail(loginRequestDto.getUsernameEmail(),null,false,null).orElseThrow(()->new ApiException(HttpStatus.BAD_REQUEST,"Invalid username/Email/password"));
 
+        if( !(userModel.getUsername().equals(loginRequestDto.getUsernameEmail()) || userModel.getEmail().equals(loginRequestDto.getUsernameEmail())) || !passwordEncoder.matches(loginRequestDto.getPassword(), userModel.getPassword())){
+            throw new ApiException(HttpStatus.UNAUTHORIZED,"Invalid username/email/password.");
+        }
+
         if(userModel.isLocked()){
             throw new ApiException(HttpStatus.FORBIDDEN,"Your Account has been suspended");
         }else if(!userModel.isEnabled()){
             throw new ApiException(HttpStatus.BAD_REQUEST,"Account Not Verified");
         }
 
-        if( !(userModel.getUsername().equals(loginRequestDto.getUsernameEmail()) || userModel.getEmail().equals(loginRequestDto.getUsernameEmail())) || !passwordEncoder.matches(loginRequestDto.getPassword(), userModel.getPassword())){
-            throw new ApiException(HttpStatus.UNAUTHORIZED,"Invalid username/email/password.");
-        }
         final String jwtToken=jwtService.generateJwtToken(UserModel.toDto(userModel),jwtExpireMs,jwtSecret);
         final var cookie=Utils.generateCookie(jwtToken, jwtExpireMs, "/");
         httpResponse.addCookie(cookie);

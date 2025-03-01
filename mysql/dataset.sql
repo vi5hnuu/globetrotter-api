@@ -1,13 +1,25 @@
 create database if not exists globetrotter;
 use globetrotter;
 
+Drop table if exists places;
 CREATE TABLE if not exists places (
 	id Varchar(32) primary key,
     alias VARCHAR(50) unique not null,
     name VARCHAR(100) not null,
     clues JSON not null,
-    funFacts JSON not NULL
+    fun_facts JSON not NULL
 );
+
+Drop table if exists submissions;
+CREATE TABLE if not exists submissions (
+    id Varchar(32) primary key,
+    user_id Varchar(32) not null,
+    question_id VARCHAR(32) not null,
+    choice VARCHAR(32) not null,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 
 insert into places values (CONCAT('PLC', SUBSTRING(REPLACE(UUID(), '-', ''), 1, 29)),"destination-1","Paris",'["City of Lights","Home of the Eiffel Tower"]','["The Louvre is the most visited art museum in the world.","Paris has only one stop sign in the entire city."]');
 
