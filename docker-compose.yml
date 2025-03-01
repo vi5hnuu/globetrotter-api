@@ -14,6 +14,8 @@ services:
       dockerfile: ./Dockerfile
     depends_on:
       - globetrotter-mysql
+    ports:
+      - "9999:9999"
     networks:
       - globetrotter-network
 
