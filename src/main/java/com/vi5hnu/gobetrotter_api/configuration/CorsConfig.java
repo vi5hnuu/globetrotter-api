@@ -15,7 +15,7 @@ public class CorsConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
 
-        config.setAllowedOrigins(List.of("http://localhost:4200","https://globetrotter-ui.onrender.com")); // Allow Angular frontend
+        config.setAllowedOriginPatterns(List.of("http://localhost:4200","https://globetrotter-ui.onrender.com")); // Allow Angular frontend
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS","PATCH"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true); // Important if using authentication
