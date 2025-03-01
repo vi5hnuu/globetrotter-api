@@ -123,6 +123,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>globetrotter-api</finalName>
 	</build>
 
 </project>
