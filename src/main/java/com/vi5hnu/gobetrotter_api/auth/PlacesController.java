@@ -8,9 +8,11 @@ import com.vi5hnu.gobetrotter_api.services.places.PlacesRepository;
 import com.vi5hnu.gobetrotter_api.services.places.PlacesService;
 import com.vi5hnu.gobetrotter_api.services.submission.SubmissionRepository;
 import com.vi5hnu.gobetrotter_api.services.submission.SubmissionService;
+import com.vi5hnu.gobetrotter_api.services.user.UserService;
 import com.vi5hnu.gobetrotter_api.specifications.PlaceSpecification;
 import com.vi5hnu.gobetrotter_api.specifications.SubmissionSpecification;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,6 +25,7 @@ import java.util.stream.Collectors;
 @RequestMapping(path = "api/v1/places")
 @RequiredArgsConstructor
 public class PlacesController {
+    final UserService userService;
     final PlacesService placesService;
     final SubmissionService submissionService;
     final SubmissionRepository submissionRepository;
@@ -90,19 +93,45 @@ public class PlacesController {
     }
 
     @GetMapping(path = "score")
-    ResponseEntity<Map<String,Object>> makeSubmittion(Principal principal) throws ApiException {
-        final var submissions=submissionRepository.findAll(SubmissionSpecification.findByUserId(principal.getName()))
+    ResponseEntity<Map<String,Object>> getMyScore(Principal principal) throws ApiException {
+        return ResponseEntity.status(200).body(Map.of("success",true,"data",getScoreCard(principal.getName())));
+    }
+
+    @GetMapping(path = "score/{username}")
+    ResponseEntity<Map<String,Object>> getOpponentScore(@PathVariable("username") String username) throws ApiException {
+        final var user=userService.findByUsernameOrEmail(username,false,false,true).orElse(null);
+
+        if(user==null){
+            throw new ApiException(HttpStatus.NOT_FOUND,"user does not exists");
+        }
+        return ResponseEntity.status(200).body(Map.of("success",true,"data",getScoreCard(user.getId())));
+    }
+
+    @PostMapping(path = "reset")
+    private ScoreCard resetSubmissionFor(Principal principal){
+        final var submissions=submissionRepository.findAllByUserId(principal.getName());
+        for(SubmissionModel submission:submissions){
+            submission.setDeleted(true);
+        }
+        submissionRepository.saveAll(submissions);
+        return new ScoreCard();
+    }
+
+
+    private ScoreCard getScoreCard(String userId){
+        final var submissions=submissionRepository.findAll(SubmissionSpecification.findByUserId(userId))
                 .stream().collect(Collectors.toMap(SubmissionModel::getQuestionId, SubmissionModel::getChoice));
         if(submissions.isEmpty()){
-            return ResponseEntity.status(200).body(Map.of("success",true,"data",0));
+            return new ScoreCard();
         }
         final var allPlaces=placesRepository.findAll(PlaceSpecification.placeIn(submissions.keySet().stream().toList()))
                 .stream().collect(Collectors.toMap(PlaceModel::getId, PlaceModel::getName));
 
-        var score=0;
+        Long score=0L;
         for(final var submission : submissions.entrySet()){
             if(allPlaces.get(submission.getKey()).equals(submission.getValue())) score+=1;
         }
-        return ResponseEntity.status(200).body(Map.of("success",true,"data",score));
+        return new ScoreCard(score,allPlaces.size()-score);
     }
+
 }

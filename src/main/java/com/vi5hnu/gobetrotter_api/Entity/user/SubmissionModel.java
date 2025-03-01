@@ -27,6 +27,9 @@ public class SubmissionModel {
     private String id;
 
     @Column(name = "user_id") private String userId;
+
+    @Column(name = "is_deleted",nullable = false)
+    private boolean isDeleted;
     @Column(name = "question_id") private String questionId;
     @Column(name = "choice") private String choice;
 

@@ -14,15 +14,15 @@ public class SubmissionSpecification {
         return (Root<SubmissionModel> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) -> {
             Predicate userPredicate = criteriaBuilder.equal(root.get("userId"), userId);
             Predicate questionPredicate = root.get("questionId").in(questionIds);
-            return criteriaBuilder.and(userPredicate, questionPredicate);
+            return criteriaBuilder.and(userPredicate, questionPredicate,criteriaBuilder.equal(root.get("isDeleted"), false));
         };
     }
 
     public static Specification<SubmissionModel> findByUserIdQuestionId(String userId,String questionId) {
-        return (Root<SubmissionModel> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) -> criteriaBuilder.and(criteriaBuilder.equal(root.get("userId"), userId), criteriaBuilder.equal(root.get("questionId"), questionId));
+        return (Root<SubmissionModel> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) -> criteriaBuilder.and(criteriaBuilder.equal(root.get("isDeleted"), false),criteriaBuilder.equal(root.get("userId"), userId), criteriaBuilder.equal(root.get("questionId"), questionId));
     }
 
     public static Specification<SubmissionModel> findByUserId(String userId) {
-        return (Root<SubmissionModel> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) -> criteriaBuilder.equal(root.get("userId"), userId);
+        return (Root<SubmissionModel> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) -> criteriaBuilder.and(criteriaBuilder.equal(root.get("isDeleted"), false),criteriaBuilder.equal(root.get("userId"), userId));
     }
 }

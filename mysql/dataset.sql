@@ -13,6 +13,7 @@ CREATE TABLE if not exists places (
 Drop table if exists submissions;
 CREATE TABLE if not exists submissions (
     id Varchar(32) primary key,
+    is_deleted boolean default false,
     user_id Varchar(32) not null,
     question_id VARCHAR(32) not null,
     choice VARCHAR(32) not null,
