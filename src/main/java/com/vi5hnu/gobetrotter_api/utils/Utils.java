@@ -1,19 +1,20 @@
 package com.vi5hnu.gobetrotter_api.utils;
 
 import jakarta.servlet.http.Cookie;
+import org.springframework.http.ResponseCookie;
 
 import java.util.Random;
 import java.util.UUID;
 
 public class Utils {
-    public static Cookie generateCookie(String jwtToken,int jwtExpireMs,String path){
-        final Cookie cookie=new Cookie("jwt", jwtToken);
-//        cookie.setSecure(true);//send via https only
-        cookie.setMaxAge(jwtExpireMs/1000);
-        cookie.setHttpOnly(true);//no access via js
-        cookie.setPath(path);
-        cookie.setDomain("");
-        return cookie;
+    public static ResponseCookie generateCookie(String jwtToken,int jwtExpireMs,String path){
+        return ResponseCookie.from("jwt", jwtToken)
+                .httpOnly(true)
+                .maxAge(jwtExpireMs/1000)
+                .path(path)
+                .domain("")
+                .sameSite("None")
+                .build();
     }
 
     public static String generateOtp() {

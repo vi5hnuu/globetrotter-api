@@ -26,6 +26,7 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -109,7 +110,7 @@ public class UserController {
 
         //renew token
         final String jwtToken=jwtService.generateJwtToken(UserModel.toDto(userModel),jwtExpireMs,jwtSecret);
-        httpResponse.addCookie(Utils.generateCookie(jwtToken, jwtExpireMs, "/"));
+        httpResponse.addHeader(HttpHeaders.SET_COOKIE,Utils.generateCookie(jwtToken, jwtExpireMs, "/").toString());
 
         //security alert
         publisher.publishEvent(new PasswordUpdateComplete(userModel));
@@ -133,7 +134,7 @@ public class UserController {
 
         final String jwtToken=jwtService.generateJwtToken(UserModel.toDto(userModel),jwtExpireMs,jwtSecret);
         final var cookie=Utils.generateCookie(jwtToken, jwtExpireMs, "/");
-        httpResponse.addCookie(cookie);
+        httpResponse.addHeader(HttpHeaders.SET_COOKIE, cookie.toString());
 
         return ResponseEntity.ok(Map.of("success",true,"data",UserModel.toDto(userModel),"message","login success"));
     }
