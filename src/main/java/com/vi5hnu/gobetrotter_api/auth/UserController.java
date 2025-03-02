@@ -149,7 +149,7 @@ public class UserController {
 //        cookie.setSecure(true);
         cookie.setMaxAge(0);
         cookie.setHttpOnly(true);
-        cookie.setDomain("localhost");
+        cookie.setDomain("");
         cookie.setPath("/");
         httpResponse.addCookie(cookie);
         return ResponseEntity.ok(Map.of("success",true,"message",String.format("logout successful - %s",user.getUsername())));
