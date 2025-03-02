@@ -145,13 +145,8 @@ public class UserController {
     public ResponseEntity<Map<String,Object>> logout(HttpServletResponse httpResponse,Principal principal) throws ApiException {
         final var user=userRepository.findOne(UserSpecifications.activeUserById(principal.getName())).orElseThrow(()->new ApiException(HttpStatus.BAD_REQUEST,"Failed to logout,user not found"));
 
-        final Cookie cookie=new Cookie("jwt", null);
-//        cookie.setSecure(true);
-        cookie.setMaxAge(0);
-        cookie.setHttpOnly(true);
-        cookie.setDomain("");
-        cookie.setPath("/");
-        httpResponse.addCookie(cookie);
+        final var cookie=Utils.generateCookie(null, 0, "/",activeProfile.equals(Profile.PROD.profile));
+        httpResponse.addHeader(HttpHeaders.SET_COOKIE, cookie.toString());
         return ResponseEntity.ok(Map.of("success",true,"message",String.format("logout successful - %s",user.getUsername())));
     }
 
